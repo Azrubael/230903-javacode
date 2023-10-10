@@ -1,7 +1,7 @@
 FROM openjdk:11 AS BUILD_IMAGE
 RUN apt-get update && apt-get install maven -y
-RUN git clone https://github.com/azrubael/231010-docker-ci-source.git
-RUN cd vprofile-project && git checkout docker && mvn install
+RUN git clone https://github.com/Azrubael/230903-javacode.git
+RUN cd 230903-javacode && mvn install
 
 FROM tomcat:9-jre11
 
